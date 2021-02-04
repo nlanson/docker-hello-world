@@ -2,7 +2,7 @@ const app = require('express')();
 
 var count = 0;
 
-app.get('/', (req, res ) => () {
+app.get('/', (req, res ) => {
     res.json({ title: 'Server is Working', message: '🚀🚀🚀', viewed: `${count} times` });
     count++;
 });
