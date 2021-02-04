@@ -1,8 +1,11 @@
 const app = require('express')();
 
-app.get('/', (req, res ) => 
-    res.json({ title: 'Docker is working 🐳', message: '🐳🐳🐳🐳🐳🐳' }) 
-);
+var count = 0;
+
+app.get('/', (req, res ) => () {
+    res.json({ title: 'Server is Working', message: '🚀🚀🚀', viewed: `${count} times` })
+    count++;
+});
 
 const port = process.env.PORT || 8080;
 
